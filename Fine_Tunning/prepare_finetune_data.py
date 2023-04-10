@@ -10,3 +10,10 @@ with open('C:/Users/TapasSaha/Desktop/Fine_Tunning/data.jsonl', 'w') as jsonl_fi
     # Loop through the parsed data and write each item as a separate line
     for item in data:
         jsonl_file.write(json.dumps(item) + '\n')
+
+        
+# alternative way
+with open('C:/Users/TapasSaha/Desktop/Fine_Tunning/data.jsonl', 'w') as f:
+    for item in data:
+        json.dump(item, f)
+        f.write('\n')
